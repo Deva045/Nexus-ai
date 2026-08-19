@@ -1,0 +1,16 @@
+{
+    "name": "nexus-ai",
+    "version": "1.0.0",
+    "private": true,
+
+    "scripts": {
+        "frontend": "cd frontend && npm run dev",
+        "electron": "cd electron && npm run electron",
+        "desktop": "concurrently \"npm run frontend\" \"wait-on http://localhost:5173 && npm run electron\""
+    },
+
+    "devDependencies": {
+        "concurrently": "^10.0.3",
+        "wait-on": "^9.1.0"
+    }
+}
